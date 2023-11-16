@@ -18,4 +18,9 @@ jobs:
         run: |
           ls -la
       - name: Build docker image
-        run:  docker build -t gcr.io/microservice-nodejs/my-docker-imagename:latest . 
+        uses: docker/build-push-action@v4
+        with:
+          context: .
+          file: ./orders/Dockerfile
+          push: true
+          tags: myimage:latest
