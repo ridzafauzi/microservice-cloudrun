@@ -20,4 +20,4 @@ jobs:
       - name: Build docker image
         run: |
           gcloud auth configure-docker
-          docker build --tag "gcr.io/microservice-nodejs/myimage:latest" .
+          docker build -f orders/Dockerfile --tag "gcr.io/microservice-nodejs/myimage:latest" .
