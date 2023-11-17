@@ -29,3 +29,6 @@ jobs:
         with:
           service: 'hello-cloud-run'
           image: 'gcr.io/microservice-nodejs/myimage:latest'
+      - name: update service port
+        run: |
+          gcloud run services update hello-cloud-run --port 3001
