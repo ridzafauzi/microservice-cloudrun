@@ -27,6 +27,6 @@ jobs:
       - name: Deploy to Cloud Run
         uses: 'google-github-actions/deploy-cloudrun@v1'
         with:
-          service: 'hello-cloud-run'
+          service: 'hello-cloud-run1'
           image: 'gcr.io/microservice-nodejs/myimage:latest'
           flags: --port=3001
