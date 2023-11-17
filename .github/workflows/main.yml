@@ -19,10 +19,5 @@ jobs:
           ls -la
       - name: Build docker image
         run: |
-      - name: Build docker image
-        uses: docker/build-push-action@v4
-        with:
-          context: .
-          file: ./orders/Dockerfile
-          push: true
-          tags: gcr.io/microservice-nodejs/myimage:latest
+          gcloud auth configure-docker
+          docker build --tag "gcr.io/microservice-nodejs/myimage:latest"
