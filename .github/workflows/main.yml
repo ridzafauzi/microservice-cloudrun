@@ -23,4 +23,4 @@ jobs:
           context: .
           file: ./orders/Dockerfile
           push: true
-          tags: gcr.io/myimage:latest
+          tags: gcr.io/microservice-nodejs/myimage:latest
