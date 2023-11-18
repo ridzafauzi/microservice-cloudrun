@@ -22,12 +22,12 @@ jobs:
         run: |
           gcloud auth configure-docker
           docker build -f orders/Dockerfile --tag "gcr.io/microservice-nodejs/myimage:latest" orders/
-      #- name: Push docker image
-      #  run: |
-      #    docker push "gcr.io/microservice-nodejs/myimage:latest"
-      #- name: Deploy to Cloud Run
-      #  uses: 'google-github-actions/deploy-cloudrun@v1'
-      #  with:
-      #    service: 'hello-cloud-run1'
-      #    image: 'gcr.io/microservice-nodejs/myimage:latest'
-      #    flags: --port=3001
+      - name: Push docker image
+        run: |
+          docker push "gcr.io/microservice-nodejs/myimage:latest"
+      - name: Deploy to Cloud Run
+        uses: 'google-github-actions/deploy-cloudrun@v1'
+        with:
+          service: 'hello-cloud-run1'
+          image: 'gcr.io/microservice-nodejs/myimage:latest'
+          flags: --port=3001
