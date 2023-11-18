@@ -30,4 +30,4 @@ jobs:
         with:
           service: 'hello-cloud-run'
           image: 'gcr.io/microservice-nodejs/myimage:latest'
-          flags: --port=3001
+          flags: '--port=3001 --allow-unauthenticated'
