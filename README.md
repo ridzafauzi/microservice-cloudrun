@@ -1,4 +1,4 @@
-
+![alt text](diagram.png)
 
 CI/CD pipeline to build and push NodeJS web app using docker and deploy as serverless container in Google Cloud Run with keyless authentication ( utilizing OIDC token and Workload Identity Federation )
 
